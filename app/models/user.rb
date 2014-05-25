@@ -6,4 +6,5 @@ class User
   field :email
 
   has_many :links, dependent: :destroy
+  has_many :votes, dependent: :destroy
 end
