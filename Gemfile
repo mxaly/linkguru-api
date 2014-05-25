@@ -15,5 +15,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :development do
+  gem 'faker'
   gem 'pry-rails'
 end
