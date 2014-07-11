@@ -4,6 +4,7 @@ class LinksController < ActionController::Base
   expose(:links) { Link.all }
 
   def index
+    headers['Access-Control-Allow-Origin'] = "*"
     respond_with links
   end
 end
