@@ -12,7 +12,7 @@ class Link
 
   field :description, type: String
   field :url, type: String
-  field :rating, type: Integer, default: 0
+  field :score, type: Integer, default: 0
   field :short_id, type: Integer
 
   index({ id: 1, rating: 1 })
