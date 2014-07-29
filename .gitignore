@@ -15,3 +15,5 @@
 /log/*.log
 /tmp
 /config/mongoid.yml
+
+config/database.yml

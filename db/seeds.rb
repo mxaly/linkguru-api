@@ -13,11 +13,9 @@ puts 'Creating links...'
   @created = false
   while !@created do
     user = User.all[rand(10)]
-    tags = Faker::Lorem.words(rand(4)+1)
     @created = Link.create(
       user: user,
       description: Faker::Lorem.sentence,
-      tags_array: tags,
       description: Faker::Lorem.sentence,
       url: "https://www.google.com/#q=#{Faker::Lorem.word}"
     ).save

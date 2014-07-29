@@ -1,21 +1,9 @@
-class Link
-  include Mongoid::Document
-  include Mongoid::Timestamps
-  include Mongoid::Taggable
-
-
+class Link < ActiveRecord::Base
   validates_presence_of :url
   validates_uniqueness_of :url, :message => "old!"
 
   belongs_to :user
   has_many :votes, as: :voteable
-
-  field :description, type: String
-  field :url, type: String
-  field :score, type: Integer, default: 0
-  field :short_id, type: Integer
-
-  index({ id: 1, rating: 1 })
 
   def set_rating
     update_attributes(rating: votes.to_a.map(&:value).sum)

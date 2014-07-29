@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 4.1.1'
-gem 'mongoid', github: 'mongoid/mongoid'
-gem 'mongoid_taggable'
+gem 'pg'
 
 
 gem 'sass-rails', '~> 4.0.0'

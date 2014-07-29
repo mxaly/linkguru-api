@@ -1,10 +1,4 @@
-class User
-  include Mongoid::Document
-  include Mongoid::Timestamps
-
-  field :name
-  field :email
-
+class User < ActiveRecord::Base
   has_many :links, dependent: :destroy
   has_many :votes, dependent: :destroy
 end
