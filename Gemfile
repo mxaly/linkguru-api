@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'decent_exposure'
+gem 'active_model_serializers'
 
 group :development do
   gem 'faker'
