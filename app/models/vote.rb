@@ -6,7 +6,7 @@ class Vote < ActiveRecord::Base
   belongs_to :voteable, polymorphic: true
 
   validates_presence_of :user, :voteable, :value
-  validates_uniqueness_of :user, scope: [:voteable_id, :voteable_class]
+  validates_uniqueness_of :user, scope: [:voteable_id, :voteable_type]
   validates_inclusion_of :value, in: [1, -1]
 
   scope :up,   -> { where(value: 1) }
